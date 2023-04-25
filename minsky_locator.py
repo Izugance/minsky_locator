@@ -41,7 +41,7 @@ class Locator:
 
         return list(parse_string)
 
-    def process(self) -> Tuple[str, str]:
+    def process(self) -> tuple[str, str]:
         """
         Process the parse string and return a tuple of the processed
         string and the last write.
@@ -52,7 +52,7 @@ class Locator:
             write = self.curr_state.process(self)
         return ("".join(self.parse_string), write)
 
-    def start(self) -> list[str]:
+    def start(self) -> tuple[str, str]:
         """
         Start off the parser in the right state and return the
         result of processing.
