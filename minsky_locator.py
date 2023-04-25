@@ -32,7 +32,7 @@ class Locator:
         self.parse_string = parse_string
         self.pointer = parse_string.index("X")
 
-    def _validate_string(self, parse_string) -> list[str]:
+    def _validate_string(self, parse_string: str) -> list[str]:
         assert parse_string[0] == parse_string[-1] == "Y", "Improper delimiters"
         units = parse_string.split("X")
         target = units[0].strip("Y")
