@@ -1,7 +1,9 @@
-"""Minsky's Turing locator solution implemented with the state pattern.
+"""
+Minsky's Turing locator solution implemented with the state pattern.
 
 We have six states (L1, L2, R1, R2, R3, R4) and six symbols (X, Y, A, B,
-0, 1)."""
+0, 1).
+"""
 
 
 class Locator:
