@@ -7,7 +7,8 @@ We have six states (L1, L2, R1, R2, R3, R4) and six symbols (X, Y, A, B,
 
 
 class Locator:
-    """A parser for finding target--location pairs that match in an
+    """
+    A parser for finding target--location pairs that match in an
     input string for a possible copy of its contents by a Turing copier.
 
     The init arg for this locator is a string required to be in the
@@ -64,8 +65,10 @@ class State:
     """Base class representing both left and right states."""
 
     def shift(self, context: Locator) -> None:
-        """Move the locator's pointer left or right depending on the
-        current state."""
+        """
+        Move the locator's pointer left or right depending on the
+        current state.
+        """
         # Intentional coupling of state logic due to only two states.
         if self.__class__.__name__.startswith("L"):
             shift = context.pointer - 1
